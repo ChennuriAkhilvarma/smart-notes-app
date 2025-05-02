@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Note } from '../types';
 import { StringMappingType } from 'typescript';
 
-const API_URL = 'http://localhost:8080/api';
+const API_URL = process.env.REACT_APP_API_URL + '/api';
 
 const getAuthHeaders = () => {
     const token = localStorage.getItem('token');
