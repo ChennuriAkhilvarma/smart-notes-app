@@ -39,13 +39,27 @@ cd smart-notes
 - **Create a `.env` file:**
   ```
   HUGGINGFACE_API_KEY=your_huggingface_api_key
-  MONGODB_URI=mongodb://localhost:27017
+  MONGODB_URImongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority
   JWT_SECRET=your_jwt_secret
   ```
-- **Start MongoDB** (if not running):
-  ```bash
-  docker run -d -p 27017:27017 --name mongo mongo
-  ```
+## Database Setup (MongoDB Atlas)
+
+This project uses [MongoDB Atlas](https://www.mongodb.com/atlas/database) as the database.
+
+1. **Create a free MongoDB Atlas account** and set up a new cluster.
+2. **Create a database user** with a username and password.
+3. **Get your connection string** from the Atlas dashboard. It will look like:
+   ```
+   mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority
+   ```
+4. **Set your connection string in the backend `.env` file:**
+   ```
+   MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority
+   ```
+
+> **Never commit your `.env` file or secrets to git!**
+
+---
 - **Run the backend:**
   ```bash
   go run cmd/server/main.go
