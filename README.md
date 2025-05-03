@@ -2,6 +2,25 @@
 
 A full-stack, AI-powered note-taking app with user authentication, tag suggestions, search, pagination, and automatic note summarization using Hugging Face.
 
+## 🌐 Live Demo
+
+- **Frontend:** [https://smart-notes-akhils-projects-72fe9375.vercel.app](https://smart-notes-akhils-projects-72fe9375.vercel.app)
+- **Backend:** [https://smart-notes-1ni5.onrender.com](https://smart-notes-1ni5.onrender.com)
+
+## 📸 Screenshots
+
+### Login Page
+
+![Login](screenshots/login.png)
+
+### Notes Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Note Creation
+
+![Create Note](screenshots/create-note.png)
+
 ## 🚀 Features
 
 - **User Authentication:** Signup, login, and JWT-protected routes.
@@ -64,6 +83,13 @@ cd smart-notes
   ```
 - The app will be available at [http://localhost:3000](http://localhost:3000).
 
+## 🚀 Deployment
+
+- **Frontend:** Deployed on [Vercel](https://vercel.com/)
+  - Set `REACT_APP_API_URL` to backend Render URL in Vercel environment variables.
+- **Backend:** Deployed on [Render](https://render.com/)
+  - Set `MONGODB_URI`, `JWT_SECRET`, and `HUGGINGFACE_API_KEY` in Render environment variables.
+
 ## 🔑 Getting a Hugging Face API Key
 
 1. Go to [Hugging Face](https://huggingface.co/settings/tokens).
@@ -105,7 +131,6 @@ smart-notes/
 - Rich text editing
 - Note sharing/collaboration
 - More advanced AI features (e.g., keyword extraction, sentiment)
-- Deployment to cloud (Vercel/Netlify/Render)
 
 ## Credits
 
